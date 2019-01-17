@@ -48,4 +48,6 @@ void read() {
     cout << "The highest reading is " << highest << "." << endl;
     cout << "The lowest reading is " << lowest << "." << endl;
     cout << "The median reading is " << median << "." << endl;
+
+    read.close();
 }

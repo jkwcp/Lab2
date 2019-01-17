@@ -10,14 +10,22 @@
 #include <string>
 #include <sstream>
 #include <random>
-#include <algorithm>
 using namespace std;
+
+const int UPPER = 1024;
+const int LOWER = 512;
+const int MAX = 90;
+const int MIN = 50;
 
 void create() {
     ofstream file("../Readings.txt", fstream::out);
+    random_device rd;
+    mt19937 generator(rd());
+    uniform_int_distribution<> distribution(LOWER,UPPER);
     srand((unsigned) time(NULL));
-    int x = 512 + rand() % (1024 - 512);
+    int x = distribution(generator);//512 + rand() % (UPPER - LOWER);
     for (int i = 0; i < x; i++) {
-        file << i << " " << fixed << setprecision(3) << 50 + rand() / (double) (RAND_MAX / (90 - 50)) << "\n";
+        file << i << " " << fixed << setprecision(3) << MIN + rand() / (double) (RAND_MAX / (MAX - MIN)) << "\n";
     }
+    file.close();
 }
