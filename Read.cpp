@@ -44,8 +44,8 @@ void read() {
     }
 
     cout << "There are " << count << " readings." << endl;
-    cout << "The average reading is " << sum / count << " ." << endl;
-    cout << "The highest reading is " << highest << " ." << endl;
-    cout << "The lowest reading is " << lowest << " ." << endl;
-    cout << "The median reading is " << median << " ." << endl;
+    cout << "The average reading is " << sum / count << "." << endl;
+    cout << "The highest reading is " << highest << "." << endl;
+    cout << "The lowest reading is " << lowest << "." << endl;
+    cout << "The median reading is " << median << "." << endl;
 }
